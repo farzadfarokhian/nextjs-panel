@@ -37,7 +37,7 @@ export default function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedRow, setSelectedRow] = useState(null);
- 
+
     const [formData, setFormData] = useState(initFormData);
 
     const openModal = () => {
@@ -103,7 +103,7 @@ export default function Home() {
     };
 
     const handleSave = () => {
-        let newRowData={};
+        let newRowData = {};
 
         if (selectedRow) {
             newRowData = rowData.map((row) =>
@@ -113,8 +113,8 @@ export default function Home() {
             );
             setRowData(newRowData);
         } else {
-            newRowData = {...formData, id: Number(rowData.length + 1) };
-            setRowData((prevData) => [ ...prevData, newRowData ]); 
+            newRowData = { ...formData, id: Number(rowData.length + 1) };
+            setRowData((prevData) => [...prevData, newRowData]);
         }
 
         setSelectedRow(null);
