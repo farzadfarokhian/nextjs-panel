@@ -43,6 +43,8 @@ export default function Home() {
     };
 
     const closeModal = () => {
+        setSelectedRow(null);
+        setFormData(null);
         setIsModalOpen(false);
     };
 
@@ -114,7 +116,7 @@ export default function Home() {
         }
 
         setSelectedRow(null);
-        setFormData(null)
+        setFormData(null);
         setIsModalOpen(false);
     };
 
