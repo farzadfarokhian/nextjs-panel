@@ -29,14 +29,17 @@ export default function Home() {
         { id: 9, name: 'محسن', email: 'tester3@gmail.com', date: '23/08/1400', state: 'فعال' }
     ]);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedRow, setSelectedRow] = useState(null);
-    const [formData, setFormData] = useState({
+    const initFormData = {
         name: "",
         email: "",
         date: "",
         state: ""
-    });
+    };
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedRow, setSelectedRow] = useState(null);
+ 
+    const [formData, setFormData] = useState(initFormData);
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -44,7 +47,7 @@ export default function Home() {
 
     const closeModal = () => {
         setSelectedRow(null);
-        setFormData(null);
+        setFormData(initFormData);
         setIsModalOpen(false);
     };
 
@@ -116,7 +119,7 @@ export default function Home() {
         }
 
         setSelectedRow(null);
-        setFormData(null);
+        setFormData(initFormData);
         setIsModalOpen(false);
     };
 
