@@ -5,7 +5,7 @@ const Modal = ({ isOpen, onClose, onSave, title, children }) => {
 
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg w-1/3 shadow-lg">
+      <div className="bg-white p-6 rounded-lg max-w-lg w-full shadow-lg">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold text-gray-700">{title}</h2>
         </div>
