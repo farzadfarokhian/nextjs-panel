@@ -15,7 +15,6 @@ ModuleRegistry.registerModules([
     ClientSideRowModelModule,
 ]);
 
-
 export default function Home() {
     const [rowData, setRowData] = useState([
         { id: 1, name: 'علی', email: 'Celica@gmail.com', date: '23/08/1400', state: 'فعال' },
